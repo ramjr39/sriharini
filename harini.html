@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>harini-portfolio</title>
+    <style>
+        body{
+            background-color: rgb(245, 137, 48);
+            font-family: Arial,sans-serif;
+            margin: 0%;
+            padding: 0%;
+        }
+        header{
+            background-color:rgb(235, 24, 24);
+            color:white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+       .header-content h1{
+        font-size: 2.5rem;
+        background-color: aqua;
+        
+       }
+
+       .image{
+        width: 150px;
+        height:150px ;
+        border-radius: 75%;
+        top: 60px;
+        left: 100px;
+        position: absolute;
+        object-fit: cover;
+        bottom: 5px;
+       }
+       nav{
+        background-color: rgb(247, 238, 137);
+        color:black;
+        text-align: center;
+       }
+       nav ul {
+        list-style-type:none ;
+        padding: 5px;
+       }
+       nav ul li{
+        display: inline-block;
+        padding: 2px;
+       }
+       :hover.nav ul li{
+        color: blue;
+        cursor: all-scroll;
+       }
+       .section-content{
+        background-color: #bff1f9;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: justify;
+       }
+       .Resume{
+        text-align: center;
+       }
+       
+       .dbutton{
+        background-color: blue;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 5px;
+        align-self: center;
+       }
+       .dbutton:hover{
+        background-color: red;
+       }
+       footer{
+        text-align: center;
+        padding: 1rem;
+        background-color: rgb(236, 116, 18);
+        color:black;
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+<img src="WhatsApp Image 2023-10-25 at 7.08.57 PM.jpeg" alt="my profile" class="image">
+<h1>SRIHARINI S</h1>
+<H3>student Of Alagappa Government Arts & Science College</H3>
+<H2>ALAGAPPA UNIVERSITY</H2>
+<H2>KARAIKUDI</H2>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About |</a></li>
+            <li><a href="#Education">Education |</a></li>
+            <li><a href="#Skills">Skills |</a></li>
+            <li><a href="#Projects">Projects |</a></li>
+            <li><a href="#Resume">Resume</a></li>
+        </ul>
+
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p> Hello Everyone!Iam a computer science student  studying in final yearand I know more programming languages:
+        <p>c,c++,java,SQL database(RDBMS)</p>
+            </p>
+        </div>
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>Alagappa Government Arts and Science College-Karaikudi </p>
+            <p>BSC computer Science</p>
+        </div>
+
+    </section>
+
+    <section id="Skills">
+        <div class=" section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web design(html)</li>
+                <li>Photoshop</li>
+                <li>Type writing</li>
+                <li>data entry</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section id="Projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="">project 1</a></li>
+                <li><a href="">project 2</a></li>
+            </ul>
+
+        </div>
+
+    </section>
+    <section id="Resume">
+        <div class="section-content">
+            <div class="Resume">
+            <h2>Resume</h2>
+            <a href="DOC-20231025-WA0014..pdf"> <button class="dbutton">Download cv</button></a>
+            </div>
+        </div>
+    </section>
+    <footer><center>
+        <p>&copy;2023 SRIHARINI S</p>
+    </center>  
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+            anchor.addEventListener('click',function(e){
+                e.preventDefault();
+                const targetId=this.getAttribute('href').substring(1);
+                const targetElement=document.getElementById(targetId);
+                if(targetElement){
+                    window.scrollTo({
+                        top:
+                      targetElement.offsetTop,behavior:'smooth'  
+                    });
+                }
+        });
+        });
+    </script>
+    
+</body>
+</html>
